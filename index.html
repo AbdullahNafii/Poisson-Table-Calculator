@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poisson Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-area">
+            <h1>Distribusi Poisson Calculator</h1>
+            <form id="poissonForm">
+                <label for="kejadian">Jumlah Kejadian yang Diinginkan (k):</label>
+                <input type="number" id="kejadian" name="kejadian" required>
+                <label for="lambda">Rata-rata Jumlah Kejadian (λ):</label>
+                <input type="number" id="lambda" name="lambda" step="0.01" required><br>
+                <button type="submit">Hitung</button>
+            </form>
+            <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1634025439/01gvppnr0pq8m1cftnsspd5cvn.png" alt="">
+            <div id="result"></div>
+        </div>
+
+        <div class="steps-area">
+            <h2>Langkah perhitungan</h2>
+            <div id="steps">
+                <p id="lambdaPangkatK"></p>
+                <p id="ePangkatMinusLambda"></p>
+                <p id="faktorialK"></p>
+                <p id="hasilPerkalian"></p>
+                <p id="hasilFinal"></p>
+            </div>
+        </div>
+        <h2> Tabel Distribusi Poisson Kumulatif</h2>
+        <table id="poissonTable">
+            <thead>
+                <tr>
+                    <th>k</th>
+                    <th>Probabilita</th>
+                    <th>Probabilita Kumulatif</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Tabel akan diisi oleh JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
